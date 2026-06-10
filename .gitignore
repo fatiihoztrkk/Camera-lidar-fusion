@@ -1,0 +1,43 @@
+# Dataset files (too large for GitHub)
+dataset/
+
+# Pre-trained model weights
+tools/objdet_models/resnet/pretrained/
+tools/objdet_models/darknet/pretrained/
+
+# Cached detection/tracking result files
+results/*.pkl
+
+# Large video files
+results/*.avi
+results/my_tracking_results_original.avi
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Build artifacts
+*.egg-info/
+build/
+dist/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code settings
+.claude/
+
+# Backup folders
+misc_backup/
+
+# Temp ZIP builds
+/tmp/submission_build/
