@@ -1,4 +1,4 @@
-# MKT4846 — Camera-Lidar Sensor Fusion
+# Camera-Lidar Sensor Fusion
 ### Introduction to Autonomous Mobile Vehicles · Waymo Open Dataset
 
 <div align="center">
