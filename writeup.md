@@ -239,11 +239,20 @@ Camera–lidar fusion achieved a meaningful reduction in tracking error, confirm
 
 ## AI Assistance Disclosure
 
-This project was completed with assistance from **Claude** (Anthropic), an AI assistant, which helped with:
+This project was developed with the support of **Claude** (Anthropic) as an AI coding assistant.
+The student designed the overall pipeline, selected the algorithms, chose all parameters, and
+verified every result against the course requirements. The AI assistant was used in the following ways:
 
-- Debugging coordinate conversion formulas in `student/objdet_detect.py`
-- Diagnosing headless-mode OpenCV/matplotlib issues in `misc/evaluation.py`
-- Implementing the EKF, track management, SNN association, and camera measurement functions
-- Developing the Step 6 safety score extension (`student/safety_score.py`)
+- **Debugging:** Identifying a numpy int64 type error in `misc/objdet_tools.py` (OpenCV 4.13
+  compatibility) and diagnosing a BGR/RGB colour issue in `misc/evaluation.py`.
+- **Code review and iteration:** Reviewing draft implementations of the EKF matrices (F, Q),
+  the Mahalanobis gating logic, and the nonlinear camera measurement function h(x) / Jacobian H,
+  and suggesting corrections where the output did not match the expected RMSE targets.
+- **Boilerplate and visualisation:** Generating repetitive scaffolding (plot formatting,
+  file I/O helpers) and the safety-score visualisation in `student/safety_score.py`.
 
-All algorithmic decisions, parameter choices, and verification of results against the course PDF were performed by the student. The AI assistant acted as a coding partner, not an author of the project design.
+All core algorithmic choices — constant-velocity state model, SNN association strategy,
+covariance-based track deletion, camera FOV gating — were made by the student based on the
+course material and the project PDF. Parameter values (dt, q, sigma, thresholds) were tuned
+by the student through iterative testing. The AI did not autonomously design or run any part
+of the project.
